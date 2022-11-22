@@ -118,7 +118,7 @@ If all goes well, then bump the version number and publish as explained here:
 All together, though, you'll want to:
 
 ```
-cd /path/to/package
+cd /path/to/dibiho-context
 npm version <update_type>  
 npm publish --access public
 ```
