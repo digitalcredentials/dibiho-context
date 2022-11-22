@@ -11,6 +11,7 @@
 - [Install](#install)
 - [Usage](#usage)
 - [Developing](#developing)
+- [Publishing to NPM](#publish-to-npm)
 - [License](#license)
 
 ## Background
@@ -81,13 +82,11 @@ Also add the property to the exported object of index.js (yes, we duplicate them
 
 ### Update the tests:
 
-#### context.spec.js
+Adjust the tests in [context.spec.js](context.spec.js) to use the constants that you're exporting.
 
-Adjust the tests to use the constants that you're exporting.
+### Update the rollup (commonjs) export in rollup.config.js
 
-#### rollup.config.js
-
-Make sure the 'namedExports' section lists everything (and nothing more) that you are exporting in index.js, like this example:
+Make sure the 'namedExports' section in [rollup.config.js](rollup.config.js) lists everything (and nothing more) that you are exporting from [js/index.js](js/index.js), like this example:
 
 ```
 plugins: [
